@@ -1,0 +1,18 @@
+﻿@page "/SmartPhonesList"
+@using BlazorEventCallBacks.Models;
+<style>
+    body {
+        background-color: #142F43;
+    }
+</style>
+<h3 class="text-primary">Parent</h3>
+<p style="color:#71DFE7;">Favourites Total: @FavouritePhoneCount</p>
+
+<div class="border p-2 mt-2 " style="background-color:#203239">
+    <div class="d-flex p-2">
+        @foreach (SmartPhoneEntity smartPhone in SmartPhones)
+        {
+            <SmartPhone SmartPhone=@smartPhone OnFavouritePhoneSelection="FavouriteCountUpdate" />
+        }
+    </div>
+</div>

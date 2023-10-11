@@ -1,0 +1,14 @@
+﻿<h3 style="color:#BFFFF0;">Child: @smartPhone.Id </h3>
+<div class="border m-2 col-5" style="background-color:#D1D1D1">
+    <h4 class="text-secondary m-1"> Smart Phone: @smartPhone.Id </h4>
+    <input class="m-1" type="checkbox" @onchange="FavouritePhoneUpdated" /> Add to Favorite
+    <div class="m-1" style="color:#FF0000;">
+        Name: @smartPhone.SmartPhoneName<br />
+    </div>
+    @foreach (var feature in smartPhone.SmartPhoneFeatures)
+    {
+        <p class="m-1" style="color:#8E0505;">@feature.Specification -  @feature.Value</p>
+    }
+
+    <br />
+</div>
